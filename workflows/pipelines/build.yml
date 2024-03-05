@@ -6,7 +6,7 @@ resources:
   pipelines:
   - pipeline: FirstPipeline # Name of the pipeline resource.
     source: java-pipeline-exercise # The name of the pipeline referenced by this pipeline resource.
-    # project: FabrikamProject # Required only if the source pipeline is in another project
+    project: mdumisi # Required only if the source pipeline is in another project
     trigger: true # Run app-ci pipeline when any run of main pipeline completes
 
 steps:
