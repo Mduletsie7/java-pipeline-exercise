@@ -2,6 +2,11 @@
 # We are setting up a pipeline resource that references the main yaml pipeline
 # pipeline and setting up a pipeline completion trigger so that our build
 # pipeline runs when a run of the main pipeline completes
+
+name: SecondPipeline
+
+trigger: none
+
 resources:
   pipelines:
   - pipeline: FirstPipeline # Name of the pipeline resource.
@@ -9,5 +14,9 @@ resources:
     project: mdumisi # Required only if the source pipeline is in another project
     trigger: true # Run app-ci pipeline when any run of main pipeline completes
 
+
+pool:
+  vmImage: ubuntu-latest
+  
 steps:
 - bash: echo "app-ci runs after security-lib-ci completes"
