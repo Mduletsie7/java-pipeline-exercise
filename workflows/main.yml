@@ -6,7 +6,7 @@
 name: FirstPipeline
 
 trigger:
-- develop
+- main
 
 pool:
   vmImage: ubuntu-latest

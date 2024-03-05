@@ -5,6 +5,8 @@
 
 name: SecondPipeline
 
+trigger: none
+
 resources:
   pipelines:
   - pipeline: test-trigger # Name of the pipeline resource.
